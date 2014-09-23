@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   LearnRails::Application.routes.draw do
-    post 'contact', to: 'contact#process_form'
+    resources :contacts, only: [:new, :create]
     root to: 'visitors#new'
   end
 end
